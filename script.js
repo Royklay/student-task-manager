@@ -5,7 +5,14 @@ document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
  
 addButton.addEventListener("click", function() {
+    addButton.addEventListener("click", function() {
     const taskName = taskInput.value;
 
-    console.log(taskName);
+    const newTask = document.createElement("li");
+
+    newTask.textContent = taskName;
+
+    taskList.appendChild(newTask);
+
+    taskInput.value = "";
 });

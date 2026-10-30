@@ -4,3 +4,8 @@ const addButton =
 document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
  
+addButton.addEventListener("click", function() {
+    const taskName = taskInput.value;
+
+    console.log(taskName);
+});

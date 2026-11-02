@@ -22,7 +22,8 @@ const completedFilter = document.getElementById("completed-filter");
 const loadTasksButton = document.getElementById("load-tasks");
 
 let tasks = [];
-let currentFilter = "all";
+let currentFilter =
+sessionStorage.getItem("currentFilter") || "all";
 
 
 // Save tasks
@@ -118,21 +119,27 @@ function displayTask() {
 }
 
 
-// Filters
+// All filter
 allFilter.addEventListener("click", function() {
     currentFilter = "all";
+    sessionStorage.setItem("currentFilter", currentFilter);
     displayTask();
 });
 
+// Pending filter
 pendingFilter.addEventListener("click", function() {
     currentFilter = "pending";
+    sessionStorage.setItem("currentFilter", currentFilter);
     displayTask();
 });
 
+// Completed filter
 completedFilter.addEventListener("click", function() {
     currentFilter = "completed";
+    sessionStorage.setItem("currentFilter", currentFilter);
     displayTask();
 });
+
 
 
 // Fetch sample tasks
@@ -171,7 +178,7 @@ loadTasksButton.addEventListener("click", async function() {
         loadTasksButton.textContent = "Load Sample Tasks";
         loadTasksButton.disabled = false;
     }
-});
+})
 
 
 // Start application

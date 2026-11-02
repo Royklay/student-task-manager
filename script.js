@@ -5,6 +5,8 @@ const taskList = document.getElementById("task-list");
 const allFilter = document.getElementById("all-filter");
 const pendingFilter = document.getElementById("pending-filter");
 const completedFilter = document.getElementById("completed-filter");
+const loadTasksButton =
+document.getElementById("load-tasks");
 
 let tasks = [];
 let currentFilter = "all";

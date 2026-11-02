@@ -112,3 +112,16 @@ completedFilter.addEventListener("click", function() {
 
 loadTasks();
 displayTask();
+
+loadTasksButton.addEventListener("click", async function() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=5");
+
+        const sampleTasks = await response.json();
+
+        console.log(sampleTasks);
+
+    } catch (error) {
+        console.log("Error loading tasks:", error);
+    }
+});

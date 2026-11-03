@@ -180,6 +180,12 @@ loadTasksButton.addEventListener("click", async function() {
     }
 })
 
+if(document.cookie.includes("visited=true")){
+  console.log("Welcome back!");
+}else{
+  alert("Welcome to Student Task Manager!");
+  document.cookie = "visited=true;max-aged=8400"
+}
 
 // Start application
 loadTasks();

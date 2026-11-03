@@ -6,7 +6,7 @@ Student Task Manager is a simple web application that helps students organise an
 
 ## Live Demo
 
-[View Live Project]
+[View Live Project]  https://royklay.github.io/student-task-manager/
 
 ## Features
 
